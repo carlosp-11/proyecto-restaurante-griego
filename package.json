@@ -1,0 +1,11 @@
+{
+  "name": "proyecto-restaurante-griego",
+  "version": "1.0.0",
+  "description": "Web del restaurante El Olivo Azul, cocina griega",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Carlos Ponce",
+  "license": "ISC"
+}

@@ -1,0 +1,11 @@
+# Dependencias
+node_modules/
+
+# Parcel
+.parcel-cache/
+dist/
+
+# Sistema y editor
+.DS_Store
+.vscode/
+*.log
