@@ -2,10 +2,15 @@
   "name": "proyecto-restaurante-griego",
   "version": "1.0.0",
   "description": "Web del restaurante El Olivo Azul, cocina griega",
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "Carlos Ponce",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
 }
