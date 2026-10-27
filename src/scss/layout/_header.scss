@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: $space-sm;
+  z-index: 10;
+  padding: $space-xs $space-sm;
+  background-color: $blue;
+  color: $white;
+
+  &:focus {
+    top: $space-sm;
+    color: $white;
+  }
+}
+
+.site-header {
+  border-bottom: 1px solid $limestone;
+  background-color: $white;
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-sm;
+  padding-top: $space-xs;
+  padding-bottom: $space-xs;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+  text-decoration: none;
+}
+
+.brand__logo {
+  width: 56px;
+  height: 56px;
+
+  @include from(tablet) {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.brand__name {
+  font-family: $font-heading;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $blue-dark;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-xs $space-sm;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    padding: $space-xs 0;
+    color: $earth;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      color: $blue;
+      border-bottom-color: $blue;
+    }
+  }
+}
