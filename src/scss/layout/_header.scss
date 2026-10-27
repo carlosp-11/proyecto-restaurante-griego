@@ -47,11 +47,12 @@
 .brand__name {
   font-family: $font-heading;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
   color: $blue-dark;
 }
 
 .main-nav__list {
+  font-family: $font-nav;
   display: flex;
   flex-wrap: wrap;
   gap: $space-xs $space-sm;
