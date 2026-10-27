@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <include src="partials/head.html" locals='{"title": "Nuestros platos · El Olivo Azul", "description": "La carta de El Olivo Azul: entrantes, principales y postres de la cocina griega, de la musaka al baklava."}'></include>
+</head>
+<body>
+  <include src="partials/header.html"></include>
+
+  <main id="main" class="container category">
+    <h1>Nuestros platos</h1>
+    <p class="category__lead">Una carta corta, para compartir al centro: entrantes, platos principales de horno y de brasa, y algún postre con miel y nueces.</p>
+
+    <ul class="dish-grid">
+        <li>
+          <include src="partials/dish-card.html" locals='{"image": "moussaka", "alt": "Ración de musaka en plato de borde azul, con sus capas de berenjena, ragú y bechamel gratinada", "title": "Musaka", "text": "Capas de berenjena, ragú de cordero y bechamel gratinada al horno.", "type": "mains", "typeLabel": "Principal", "url": "/det1/", "linkText": "Más sobre la musaka"}'></include>
+        </li>
+        <li>
+          <include src="partials/dish-card.html" locals='{"image": "souvlaki", "alt": "Tres brochetas de souvlaki a la brasa sobre una tabla de olivo, con limón asado", "title": "Souvlaki", "text": "Brochetas de cerdo marinadas con limón y orégano, a la brasa de carbón.", "type": "mains", "typeLabel": "Principal", "url": "/det2/", "linkText": "Más sobre el souvlaki"}'></include>
+        </li>
+        <li>
+          <include src="partials/dish-card.html" locals='{"image": "gyros", "alt": "Pita a la brasa rellena de cerdo, tomate, cebolla, patatas fritas y tzatziki", "title": "Gyros", "text": "Pan de pita a la brasa con cerdo asado, tomate, cebolla, patatas y tzatziki.", "type": "mains", "typeLabel": "Principal", "url": "", "linkText": ""}'></include>
+        </li>
+        <li>
+          <include src="partials/dish-card.html" locals='{"image": "greek-salad", "alt": "Ensalada griega con tomate, pepino, cebolla, aceitunas y un bloque de feta con orégano", "title": "Ensalada griega", "text": "Tomate, pepino, cebolla roja, aceitunas de Kalamata y un bloque de feta.", "type": "starters", "typeLabel": "Entrante", "url": "", "linkText": ""}'></include>
+        </li>
+        <li>
+          <include src="partials/dish-card.html" locals='{"image": "tzatziki", "alt": "Tzatziki en un cuenco azul con eneldo, aceite de oliva y pan de pita tostado", "title": "Tzatziki", "text": "Yogur griego colado con pepino, ajo, eneldo y aceite de oliva.", "type": "starters", "typeLabel": "Entrante", "url": "", "linkText": ""}'></include>
+        </li>
+        <li>
+          <include src="partials/dish-card.html" locals='{"image": "spanakopita", "alt": "Porción de spanakopita con masa filo dorada y relleno de espinacas y feta", "title": "Spanakopita", "text": "Masa filo crujiente rellena de espinacas y queso feta.", "type": "starters", "typeLabel": "Entrante", "url": "", "linkText": ""}'></include>
+        </li>
+        <li>
+          <include src="partials/dish-card.html" locals='{"image": "dolmades", "alt": "Cinco hojas de parra rellenas de arroz con limón y eneldo en un plato alargado", "title": "Dolmades", "text": "Hojas de parra rellenas de arroz con hierbas, limón y aceite de oliva.", "type": "starters", "typeLabel": "Entrante", "url": "", "linkText": ""}'></include>
+        </li>
+        <li>
+          <include src="partials/dish-card.html" locals='{"image": "baklava", "alt": "Dos piezas de baklava de nueces con almíbar junto a una taza de café", "title": "Baklava", "text": "Capas de masa filo con nueces, canela y almíbar de miel.", "type": "desserts", "typeLabel": "Postre", "url": "", "linkText": ""}'></include>
+        </li>
+    </ul>
+  </main>
+
+  <include src="partials/footer.html"></include>
+</body>
+</html>

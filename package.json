@@ -2,7 +2,10 @@
   "name": "proyecto-restaurante-griego",
   "version": "1.0.0",
   "description": "Web del restaurante El Olivo Azul, cocina griega",
-  "source": "src/index.html",
+  "source": [
+    "src/index.html",
+    "src/categoria/index.html"
+  ],
   "scripts": {
     "parcel:dev": "parcel",
     "parcel:build": "parcel build",

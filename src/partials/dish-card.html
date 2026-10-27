@@ -1,8 +1,11 @@
-<article class="dish-card">
+<article class="dish-card" id="{{ image }}" data-type="{{ type }}">
   <img class="dish-card__image" src="/src/img/{{ image }}-600.jpg" alt="{{ alt }}" width="600" height="448" loading="lazy">
   <div class="dish-card__body">
+    <p class="dish-card__type">{{ typeLabel }}</p>
     <h3 class="dish-card__title">{{ title }}</h3>
     <p>{{ text }}</p>
-    <a class="dish-card__link" href="{{ url }}">{{ linkText }}</a>
+    <if condition="url">
+      <a class="dish-card__link" href="{{ url }}">{{ linkText }}</a>
+    </if>
   </div>
 </article>

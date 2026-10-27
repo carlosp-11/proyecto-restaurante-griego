@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.dish-grid {
+  display: grid;
+  gap: $space-md;
+  padding: 0;
+  list-style: none;
+
+  @include from(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include from(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include from(wide) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

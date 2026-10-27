@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as *;
+
+.category {
+  padding-top: $space-md;
+}
+
+.category__lead {
+  max-width: 60ch;
+  margin: $space-sm 0 $space-md;
+}
