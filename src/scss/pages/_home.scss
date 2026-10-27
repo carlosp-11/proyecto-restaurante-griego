@@ -35,6 +35,18 @@
   }
 }
 
+// The photo is cropped differently on each screen, so the text gets its own
+// background panel instead of relying on the empty part of the image
+.hero__panel {
+  @include from(tablet) {
+    display: inline-block;
+    max-width: 30rem;
+    padding: $space-md;
+    border-radius: 4px;
+    background-color: rgba($white, 0.9);
+  }
+}
+
 .hero__lead {
   max-width: 28ch;
   margin-bottom: $space-md;
