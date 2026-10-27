@@ -35,6 +35,11 @@
   align-items: center;
   gap: $space-sm;
 
+  img {
+    width: 152px;
+    height: 152px;
+  }
+
   strong {
     font-family: $font-heading;
     font-size: 1.25rem;
