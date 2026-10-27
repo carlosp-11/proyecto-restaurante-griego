@@ -1,0 +1,59 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.site-footer {
+  margin-top: $space-lg;
+  padding: $space-md 0;
+  background-color: $blue;
+  color: $white;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $lime-white;
+    }
+  }
+
+  :focus-visible {
+    outline-color: $white;
+  }
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: $space-sm;
+
+  @include from(tablet) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.site-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+
+  strong {
+    font-family: $font-heading;
+    font-size: 1.25rem;
+  }
+}
+
+.site-footer__note {
+  font-style: italic;
+
+  @include from(tablet) {
+    text-align: right;
+  }
+}
+
+.site-footer__credits {
+  padding-top: $space-sm;
+  border-top: 1px solid rgba($white, 0.4);
+
+  @include from(tablet) {
+    grid-column: 1 / -1;
+  }
+}
