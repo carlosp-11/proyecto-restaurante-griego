@@ -73,6 +73,55 @@
   }
 }
 
+// Dishes submenu. Without JS it is just a nested list that is always visible
+.main-nav__item--has-sub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.submenu {
+  flex-basis: 100%;
+  padding: 0 0 0 $space-sm;
+  list-style: none;
+  font-size: 0.9em;
+}
+
+.submenu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: $blue-dark;
+  cursor: pointer;
+
+  &[hidden] {
+    display: none;
+  }
+
+  @include from(tablet) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.submenu-toggle__arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s;
+
+  [aria-expanded='true'] > & {
+    transform: translateY(2px) rotate(-135deg);
+  }
+}
+
 // Mobile menu (only when JS is available, otherwise the nav is always visible)
 .menu-toggle {
   display: none;
@@ -148,7 +197,32 @@
     }
   }
 
+  .submenu {
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
   @include from(tablet) {
+    .main-nav__item--has-sub {
+      position: relative;
+    }
+
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+      min-width: 13rem;
+      padding: $space-xs $space-sm;
+      border: 1px solid $limestone;
+      border-radius: 4px;
+      background-color: $white;
+      box-shadow: 0 6px 16px rgba($earth, 0.12);
+    }
+
     .menu-toggle {
       display: none;
     }

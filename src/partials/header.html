@@ -15,7 +15,17 @@
     <nav class="main-nav" id="main-nav" aria-label="Principal">
       <ul class="main-nav__list">
         <li><a href="/">Inicio</a></li>
-        <li><a href="/categoria/">Nuestros platos</a></li>
+        <li class="main-nav__item main-nav__item--has-sub">
+          <a href="/categoria/">Nuestros platos</a>
+          <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="dishes-submenu" aria-label="Mostrar platos" hidden>
+            <span class="submenu-toggle__arrow" aria-hidden="true"></span>
+          </button>
+          <ul class="submenu" id="dishes-submenu">
+            <li><a href="/det1/">Musaka</a></li>
+            <li><a href="/det2/">Souvlaki</a></li>
+            <li><a href="/categoria/">Ver toda la carta</a></li>
+          </ul>
+        </li>
         <li><a href="/restaurante/">El restaurante</a></li>
         <li><a href="/links/">Fuentes</a></li>
       </ul>
