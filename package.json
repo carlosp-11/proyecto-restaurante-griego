@@ -5,7 +5,8 @@
   "source": [
     "src/index.html",
     "src/categoria/index.html",
-    "src/det1/index.html"
+    "src/det1/index.html",
+    "src/det2/index.html"
   ],
   "scripts": {
     "parcel:dev": "parcel",
