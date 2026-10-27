@@ -1,7 +1,15 @@
-$text-color: #3b3128;
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
 
 body {
   margin: 0;
   color: $text-color;
-  font-family: Georgia, serif;
+  font-family: $font-body;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+h1 {
+  font-family: $font-heading;
+  color: $blue-dark;
 }

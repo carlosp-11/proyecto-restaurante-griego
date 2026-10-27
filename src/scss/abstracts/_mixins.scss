@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin from($size) {
+  @media (min-width: map.get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid $blue;
+  outline-offset: 3px;
+}
