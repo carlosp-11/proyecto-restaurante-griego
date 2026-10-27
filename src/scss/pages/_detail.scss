@@ -1,6 +1,10 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+.detail {
+  padding-top: $space-md;
+}
+
 .detail__header {
   max-width: 50rem;
   margin-bottom: $space-md;
