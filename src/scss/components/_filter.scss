@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *;
+
+.dish-filter {
+  margin-bottom: $space-md;
+}
+
+.dish-filter__label {
+  margin-bottom: $space-xs;
+  font-weight: 600;
+}
+
+.dish-filter__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-xs;
+
+  button {
+    min-height: 44px;
+    padding: $space-xs $space-sm;
+    border: 1px solid $blue;
+    border-radius: 999px;
+    background-color: $white;
+    color: $blue-dark;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lime-white;
+    }
+
+    // The active option is not marked only with colour: it also gets a check mark
+    &[aria-pressed='true'] {
+      background-color: $blue;
+      color: $white;
+
+      &::before {
+        content: '✓ ';
+      }
+    }
+  }
+}
+
+.dish-filter__status {
+  margin-top: $space-xs;
+  font-style: italic;
+}
