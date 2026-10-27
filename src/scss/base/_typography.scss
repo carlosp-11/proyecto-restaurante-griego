@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+  color: $text-color;
+  background-color: $white;
+  font-family: $font-body;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $blue-dark;
+}
+
+h1 {
+  font-size: 2rem;
+
+  @include from(tablet) {
+    font-size: 2.75rem;
+  }
+}
+
+h2 {
+  font-size: 1.6rem;
+
+  @include from(tablet) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p + p {
+  margin-top: $space-sm;
+}
+
+a {
+  color: $link-color;
+  text-underline-offset: 0.2em;
+
+  &:hover {
+    color: $blue-dark;
+  }
+}
+
+:focus-visible {
+  @include focus-ring;
+}
