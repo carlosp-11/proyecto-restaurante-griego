@@ -20,6 +20,15 @@
   }
 }
 
+// Older browsers (before 2021) don't know aspect-ratio and the frame would have
+// no height at all, so we fall back to the classic padding trick
+@supports not (aspect-ratio: 16 / 9) {
+  .video__frame {
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+}
+
 .video figcaption {
   margin-top: $space-xs;
   font-style: italic;
