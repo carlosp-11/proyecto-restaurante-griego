@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as *;
+
+.hours {
+  width: 100%;
+  max-width: 36rem;
+  border-collapse: collapse;
+
+  caption {
+    margin-bottom: $space-xs;
+    text-align: left;
+    font-style: italic;
+  }
+
+  th,
+  td {
+    padding: $space-xs $space-sm;
+    border-bottom: 1px solid $limestone;
+    text-align: left;
+  }
+
+  thead th {
+    border-bottom: 2px solid $blue;
+    font-family: $font-nav;
+    color: $blue-dark;
+  }
+
+  tbody th {
+    font-weight: 600;
+  }
+}

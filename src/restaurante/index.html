@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <include src="partials/head.html" locals='{"title": "El restaurante · El Olivo Azul", "description": "El Olivo Azul por dentro: el comedor encalado, la terraza bajo la parra, la cocina abierta y nuestro horario."}'></include>
+</head>
+<body>
+  <include src="partials/header.html"></include>
+
+  <main id="main" class="container detail">
+    <header class="detail__header">
+      <h1>El restaurante</h1>
+      <p class="detail__lead">Una casa de paredes blancas con un olivo en el patio. Pocas mesas, cocina abierta y platos para compartir.</p>
+    </header>
+
+    <figure class="detail__featured">
+      <img src="/src/img/dining-room-1200.jpg"
+        srcset="/src/img/dining-room-600.jpg 600w, /src/img/dining-room-1200.jpg 1200w"
+        sizes="(min-width: 1200px) 1136px, 100vw"
+        alt="Comedor con paredes encaladas, vigas de madera y mesas puestas con mantel de lino; al fondo, por una puerta en arco, un olivo en el patio"
+        width="1200" height="805">
+      <figcaption>El comedor, antes de abrir.</figcaption>
+    </figure>
+
+    <section class="detail__section" aria-labelledby="story-title">
+      <h2 id="story-title">La casa</h2>
+      <p>El Olivo Azul nace de una idea sencilla: cocinar los platos griegos de siempre con buen producto y servirlos sin prisas, como se hace en las tabernas de las islas. El nombre viene del olivo que preside el patio y del azul de la vajilla, pintada a mano, en la que llega cada plato.</p>
+      <p>Tenemos un comedor de paredes encaladas y vigas de madera, una terraza bajo una pérgola de cañas y parra para las noches de verano, y una cocina abierta desde la que se ve trabajar la brasa y el horno.</p>
+
+      <div class="gallery">
+        <figure>
+          <img src="/src/img/terrace-1200.jpg"
+            srcset="/src/img/terrace-600.jpg 600w, /src/img/terrace-1200.jpg 1200w"
+            sizes="(min-width: 768px) 33vw, 100vw"
+            alt="Terraza bajo una pérgola de cañas y parra, con mesas de madera, macetas de hierbas y un olivo centenario en el centro"
+            width="1200" height="669" loading="lazy">
+          <figcaption>La terraza</figcaption>
+        </figure>
+        <figure>
+          <img src="/src/img/kitchen-1200.jpg"
+            srcset="/src/img/kitchen-600.jpg 600w, /src/img/kitchen-1200.jpg 1200w"
+            sizes="(min-width: 768px) 33vw, 100vw"
+            alt="Cocina abierta con cazos de cobre, hierbas secas colgadas y un cocinero emplatando de espaldas"
+            width="1200" height="805" loading="lazy">
+          <figcaption>La cocina abierta</figcaption>
+        </figure>
+        <figure>
+          <img src="/src/img/diners-toast-1200.jpg"
+            srcset="/src/img/diners-toast-600.jpg 600w, /src/img/diners-toast-1200.jpg 1200w"
+            sizes="(min-width: 768px) 33vw, 100vw"
+            alt="Comensales brindando con vino blanco sobre una mesa con platos para compartir"
+            width="1200" height="805" loading="lazy">
+          <figcaption>Una mesa para compartir</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="detail__section" aria-labelledby="hours-title">
+      <h2 id="hours-title">Horario</h2>
+      <table class="hours">
+        <caption>Horario de apertura del restaurante</caption>
+        <thead>
+          <tr>
+            <th scope="col">Día</th>
+            <th scope="col">Comidas</th>
+            <th scope="col">Cenas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Lunes</th>
+            <td colspan="2">Cerrado</td>
+          </tr>
+          <tr>
+            <th scope="row">Martes a jueves</th>
+            <td>13:00 – 16:00</td>
+            <td>20:00 – 23:00</td>
+          </tr>
+          <tr>
+            <th scope="row">Viernes y sábado</th>
+            <td>13:00 – 16:30</td>
+            <td>20:00 – 23:30</td>
+          </tr>
+          <tr>
+            <th scope="row">Domingo</th>
+            <td>13:00 – 16:30</td>
+            <td>Cerrado</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="detail__note">El Olivo Azul es un restaurante ficticio: el horario es un ejemplo.</p>
+    </section>
+  </main>
+
+  <include src="partials/footer.html"></include>
+</body>
+</html>
