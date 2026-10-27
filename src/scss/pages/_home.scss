@@ -1,0 +1,98 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Hero: image on top in mobile, text over the empty left side of the photo from tablet
+.hero {
+  position: relative;
+}
+
+.hero__image {
+  width: 100%;
+  height: 50vh;
+  min-height: 260px;
+  object-fit: cover;
+  object-position: 70% center;
+
+  @include from(tablet) {
+    height: 70vh;
+  }
+}
+
+.hero__content {
+  padding-top: $space-md;
+  padding-bottom: $space-md;
+
+  @include from(tablet) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    margin-bottom: $space-xs;
+  }
+}
+
+.hero__lead {
+  max-width: 28ch;
+  margin-bottom: $space-md;
+  font-size: 1.25rem;
+}
+
+// Two columns: text + image
+.intro,
+.table {
+  display: grid;
+  gap: $space-md;
+  align-items: center;
+  margin-top: $space-lg;
+
+  @include from(desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h2 {
+    margin-bottom: $space-sm;
+  }
+
+  img {
+    border-radius: 4px;
+  }
+}
+
+.intro__text a {
+  display: inline-block;
+  margin-top: $space-sm;
+}
+
+.place {
+  margin-top: $space-lg;
+  padding: $space-lg 0;
+  background-color: $lime-white;
+}
+
+.place__lead {
+  margin: $space-xs 0 $space-md;
+}
+
+.place__gallery {
+  display: grid;
+  gap: $space-sm;
+
+  @include from(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  figcaption {
+    margin-top: $space-xs;
+    font-style: italic;
+  }
+}

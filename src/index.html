@@ -12,9 +12,82 @@
 <body>
   <include src="partials/header.html"></include>
 
-  <main id="main" class="container">
-    <h1>El Olivo Azul</h1>
-    <p>Cocina griega tradicional.</p>
+  <main id="main">
+    <section class="hero">
+      <img class="hero__image"
+        src="/src/img/hero-1920.jpg"
+        srcset="/src/img/hero-960.jpg 960w, /src/img/hero-1920.jpg 1920w"
+        sizes="100vw"
+        alt="Mesa larga de piedra con mezze griego: tzatziki en un cuenco azul, ensalada con feta, pan de pita y aceitunas"
+        width="1920" height="1071">
+      <div class="container hero__content">
+        <h1>El Olivo Azul</h1>
+        <p class="hero__lead">Cocina griega de autor, entre la piedra, el olivo y el mar.</p>
+        <a class="button button--primary" href="/categoria/">Ver nuestros platos</a>
+      </div>
+    </section>
+
+    <section class="intro container" aria-labelledby="intro-title">
+      <div class="intro__text">
+        <h2 id="intro-title">Nuestra cocina</h2>
+        <p>En El Olivo Azul cocinamos los platos de siempre de Grecia con producto de temporada y sin prisas. La musaka sale del horno en su fuente de barro, el souvlaki se hace a la brasa de carbón y el aceite de oliva está en todas las recetas.</p>
+        <p>Servimos cada plato en vajilla artesanal de borde azul, pintada a mano, porque la mesa también forma parte de la receta.</p>
+        <a href="/categoria/">Descubre todos nuestros platos</a>
+      </div>
+      <img class="intro__image"
+        src="/src/img/olive-oil-1200.jpg"
+        srcset="/src/img/olive-oil-600.jpg 600w, /src/img/olive-oil-1200.jpg 1200w"
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        alt="Aceite de oliva virgen extra en un cuenco azul junto a pan de masa madre, aceitunas y una rama de olivo"
+        width="1200" height="805" loading="lazy">
+    </section>
+
+    <section class="place" aria-labelledby="place-title">
+      <div class="container">
+        <h2 id="place-title">La casa</h2>
+        <p class="place__lead">Un comedor de paredes encaladas, una terraza bajo la parra y una cocina abierta.</p>
+        <div class="place__gallery">
+          <figure>
+            <img src="/src/img/dining-room-1200.jpg"
+              srcset="/src/img/dining-room-600.jpg 600w, /src/img/dining-room-1200.jpg 1200w"
+              sizes="(min-width: 768px) 33vw, 100vw"
+              alt="Comedor con paredes blancas, vigas de madera y mesas puestas; al fondo, un olivo en el patio"
+              width="1200" height="805" loading="lazy">
+            <figcaption>El comedor</figcaption>
+          </figure>
+          <figure>
+            <img src="/src/img/terrace-1200.jpg"
+              srcset="/src/img/terrace-600.jpg 600w, /src/img/terrace-1200.jpg 1200w"
+              sizes="(min-width: 768px) 33vw, 100vw"
+              alt="Terraza bajo una pérgola de cañas con mesas de madera y un olivo centenario en el centro"
+              width="1200" height="669" loading="lazy">
+            <figcaption>La terraza</figcaption>
+          </figure>
+          <figure>
+            <img src="/src/img/kitchen-1200.jpg"
+              srcset="/src/img/kitchen-600.jpg 600w, /src/img/kitchen-1200.jpg 1200w"
+              sizes="(min-width: 768px) 33vw, 100vw"
+              alt="Cocina abierta con cazos de cobre, hierbas secas colgadas y un cocinero emplatando"
+              width="1200" height="805" loading="lazy">
+            <figcaption>La cocina</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="table container" aria-labelledby="table-title">
+      <img class="table__image"
+        src="/src/img/diners-table-1200.jpg"
+        srcset="/src/img/diners-table-600.jpg 600w, /src/img/diners-table-1200.jpg 1200w"
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        alt="Un grupo de amigos comparte mezze en una mesa de madera: pita, tzatziki y vino blanco"
+        width="1200" height="805" loading="lazy">
+      <div class="table__text">
+        <h2 id="table-title">La mesa compartida</h2>
+        <p>En Grecia se come compartiendo. Por eso nuestra carta está pensada para pedir varios platos al centro y probar un poco de todo: un tzatziki, una ensalada con su bloque de feta, unas hojas de parra rellenas y, después, algo de la brasa.</p>
+        <p>Si es tu primera vez, empieza por dos clásicos: la <a href="/det1/">musaka</a> y el <a href="/det2/">souvlaki</a>.</p>
+      </div>
+    </section>
   </main>
 
   <include src="partials/footer.html"></include>

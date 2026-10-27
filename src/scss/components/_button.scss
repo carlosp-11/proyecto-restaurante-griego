@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.button {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid $blue;
+  border-radius: 4px;
+  font-family: $font-heading;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.button--primary {
+  background-color: $blue;
+  color: $white;
+
+  &:hover {
+    background-color: $blue-dark;
+    border-color: $blue-dark;
+    color: $white;
+  }
+}
