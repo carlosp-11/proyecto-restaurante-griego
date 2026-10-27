@@ -8,5 +8,8 @@
 @use 'components/carousel';
 @use 'components/dish-grid';
 @use 'components/filter';
+@use 'components/breadcrumb';
+@use 'components/gallery';
 @use 'pages/home';
 @use 'pages/category';
+@use 'pages/detail';

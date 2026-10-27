@@ -4,7 +4,8 @@
   "description": "Web del restaurante El Olivo Azul, cocina griega",
   "source": [
     "src/index.html",
-    "src/categoria/index.html"
+    "src/categoria/index.html",
+    "src/det1/index.html"
   ],
   "scripts": {
     "parcel:dev": "parcel",

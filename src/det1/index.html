@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <include src="partials/head.html" locals='{"title": "Musaka · El Olivo Azul", "description": "La musaka de El Olivo Azul: berenjena, ragú de cordero y bechamel gratinada en fuente de barro. Historia, elaboración y vídeo."}'></include>
+</head>
+<body>
+  <include src="partials/header.html"></include>
+
+  <main id="main" class="container detail">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/categoria/">Nuestros platos</a></li>
+        <li aria-current="page">Musaka</li>
+      </ol>
+    </nav>
+
+    <article>
+      <header class="detail__header">
+        <p class="detail__type">Plato principal · al horno</p>
+        <h1>Musaka</h1>
+        <p class="detail__lead">Berenjena frita, ragú de cordero y una bechamel espesa que se gratina hasta dorarse. El plato de horno más conocido de Grecia.</p>
+      </header>
+
+      <figure class="detail__featured">
+        <img src="/src/img/moussaka-1200.jpg"
+          srcset="/src/img/moussaka-600.jpg 600w, /src/img/moussaka-1200.jpg 1200w"
+          sizes="(min-width: 1200px) 1136px, 100vw"
+          alt="Fuente redonda de barro con la musaka recién gratinada; falta una ración y se ven las capas de berenjena, carne y bechamel"
+          width="1200" height="896">
+        <figcaption>La musaka sale del horno en su fuente de barro y reposa antes de cortarla.</figcaption>
+      </figure>
+
+      <section class="detail__section" aria-labelledby="history-title">
+        <h2 id="history-title">Un plato de capas</h2>
+        <p>En el Mediterráneo oriental se preparan desde hace siglos platos de berenjena con carne picada, y casi cada país tiene su versión. La musaka griega, tal como hoy se conoce, toma forma a principios del siglo XX, cuando se le añade por encima una capa gruesa de bechamel, una salsa de origen francés.</p>
+        <p>Desde entonces se cocina en casas y tabernas de todo el país, sobre todo los domingos y en las fiestas, y cada familia defiende su propio equilibrio entre la berenjena, la carne y la salsa.</p>
+      </section>
+
+      <section class="detail__section" aria-labelledby="kitchen-title">
+        <h2 id="kitchen-title">Cómo la preparamos</h2>
+        <p>Cortamos la berenjena en rodajas gruesas y la freímos en aceite de oliva hasta que se dora. Aparte, guisamos el cordero picado con cebolla, ajo, tomate, una rama de canela y unos granos de pimienta de Jamaica, a fuego lento, hasta que el ragú queda espeso.</p>
+        <p>Montamos la fuente por capas, la cubrimos con una bechamel enriquecida con yema de huevo y nuez moscada recién rallada y la horneamos hasta que la superficie se tuesta. Después la dejamos reposar: así las capas se asientan y cada ración sale con un corte limpio.</p>
+
+        <div class="gallery">
+          <figure>
+            <img src="/src/img/moussaka-ingredients-1200.jpg"
+              srcset="/src/img/moussaka-ingredients-600.jpg 600w, /src/img/moussaka-ingredients-1200.jpg 1200w"
+              sizes="(min-width: 768px) 33vw, 100vw"
+              alt="Ingredientes de la musaka sobre piedra: berenjenas, cordero picado, tomates, cebolla, ajo, canela, nuez moscada, huevo, harina y leche"
+              width="1200" height="805" loading="lazy">
+            <figcaption>Los ingredientes</figcaption>
+          </figure>
+          <figure>
+            <img src="/src/img/moussaka-preparation-1200.jpg"
+              srcset="/src/img/moussaka-preparation-600.jpg 600w, /src/img/moussaka-preparation-1200.jpg 1200w"
+              sizes="(min-width: 768px) 33vw, 100vw"
+              alt="Fuente de barro a medio montar con berenjena frita y ragú, junto a un cazo de bechamel con una cuchara de madera"
+              width="1200" height="805" loading="lazy">
+            <figcaption>El montaje por capas</figcaption>
+          </figure>
+          <figure>
+            <img src="/src/img/moussaka-portion-1200.jpg"
+              srcset="/src/img/moussaka-portion-600.jpg 600w, /src/img/moussaka-portion-1200.jpg 1200w"
+              sizes="(min-width: 768px) 33vw, 100vw"
+              alt="Ración rectangular de musaka en un plato artesanal de borde azul, con las capas bien definidas"
+              width="1200" height="896" loading="lazy">
+            <figcaption>La ración, lista para servir</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="detail__section" aria-labelledby="table-title">
+        <h2 id="table-title">En la mesa</h2>
+        <p>La servimos templada, no recién salida del horno, en plato artesanal de borde azul. Va bien con una ensalada griega para compartir y con pan para no dejar nada de bechamel en el plato.</p>
+      </section>
+    </article>
+
+    <nav class="detail__more" aria-label="Más platos">
+      <a href="/categoria/">Volver a nuestros platos</a>
+      <a href="/det2/">Siguiente: el souvlaki</a>
+    </nav>
+  </main>
+
+  <include src="partials/footer.html"></include>
+</body>
+</html>

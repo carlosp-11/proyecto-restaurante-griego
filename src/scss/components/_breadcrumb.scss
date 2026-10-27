@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-xs;
+  margin: $space-md 0 $space-sm;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+
+  li + li::before {
+    content: '/';
+    margin-right: $space-xs;
+    color: $olive;
+  }
+}

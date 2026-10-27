@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.detail__header {
+  max-width: 50rem;
+  margin-bottom: $space-md;
+}
+
+.detail__type {
+  font-style: italic;
+  color: $olive;
+}
+
+.detail__lead {
+  margin-top: $space-xs;
+  font-size: 1.25rem;
+}
+
+.detail__featured {
+  img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  figcaption {
+    margin-top: $space-xs;
+    font-style: italic;
+  }
+}
+
+.detail__section {
+  margin-top: $space-lg;
+
+  // Text keeps a readable width, the gallery uses the whole container
+  > h2,
+  > p {
+    max-width: 50rem;
+  }
+
+  h2 {
+    margin-bottom: $space-sm;
+  }
+}
+
+.detail__more {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: $space-sm;
+  margin-top: $space-lg;
+  padding-top: $space-md;
+  border-top: 1px solid $limestone;
+}

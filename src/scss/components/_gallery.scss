@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.gallery {
+  display: grid;
+  gap: $space-sm;
+  margin-top: $space-md;
+
+  @include from(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  figcaption {
+    margin-top: $space-xs;
+    font-style: italic;
+  }
+}
