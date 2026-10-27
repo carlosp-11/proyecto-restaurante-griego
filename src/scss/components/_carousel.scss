@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *;
+
+.featured {
+  margin-top: $space-lg;
+}
+
+.featured__lead {
+  margin: $space-xs 0 $space-md;
+}
+
+.dishes-carousel {
+  padding-bottom: $space-xs;
+
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+.dishes-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  margin-top: $space-sm;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    border: 1px solid $blue;
+    border-radius: 50%;
+    background-color: $white;
+    color: $blue;
+    cursor: pointer;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .swiper-pagination {
+    position: static;
+    width: auto;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $blue;
+  }
+}
