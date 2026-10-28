@@ -14,6 +14,11 @@
 
     <div class="booking">
       <form class="booking-form" id="booking-form" action="/reservas/" method="get">
+        <div class="form-errors" id="form-errors" tabindex="-1" hidden>
+          <h2 class="form-errors__title">Revisa estos campos:</h2>
+          <ul class="form-errors__list"></ul>
+        </div>
+
         <p class="booking-form__help">Todos los campos son obligatorios salvo los marcados como opcionales.</p>
 
         <fieldset>
@@ -31,7 +36,7 @@
 
           <div class="field">
             <label for="phone">Teléfono</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9+ ]{9,}" required>
           </div>
         </fieldset>
 

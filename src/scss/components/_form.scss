@@ -77,3 +77,45 @@
     font-size: 1.4rem;
   }
 }
+
+// Validation
+.field__error {
+  margin-top: 0.25rem;
+  color: $error;
+  font-weight: 600;
+
+  &::before {
+    content: '⚠ ';
+  }
+}
+
+.field [aria-invalid='true'] {
+  border: 2px solid $error;
+}
+
+.form-errors {
+  margin-bottom: $space-md;
+  padding: $space-sm $space-md;
+  border-left: 4px solid $error;
+  background-color: $error-bg;
+
+  &:focus {
+    outline: 3px solid $blue;
+    outline-offset: 2px;
+  }
+}
+
+.form-errors__title {
+  margin-bottom: $space-xs;
+  font-size: 1.2rem;
+  color: $error;
+}
+
+.form-errors__list {
+  margin: 0;
+  padding-left: $space-sm;
+
+  a {
+    color: $error;
+  }
+}
