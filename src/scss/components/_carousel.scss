@@ -43,15 +43,35 @@
 
   .swiper-pagination {
     position: static;
+    display: flex;
+    align-items: center;
     width: auto;
   }
 
+  // The visible dot is small, but the clickable area is 24px (WCAG 2.5.8)
   .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+    background: none;
+    opacity: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 12px;
+      height: 12px;
+      border: 2px solid $olive;
+      border-radius: 50%;
+    }
   }
 
-  .swiper-pagination-bullet-active {
+  // Active dot is filled, the rest are empty rings: not only a colour change
+  .swiper-pagination-bullet-active::before {
+    border-color: $blue;
     background-color: $blue;
   }
 }
