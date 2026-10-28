@@ -106,15 +106,54 @@ export function initBookingForm() {
     summary.hidden = invalidFields.length === 0;
   }
 
+  const confirmation = document.querySelector('#booking-confirmation');
+
+  function showConfirmation() {
+    // The date comes as "yyyy-mm-dd" (UTC), so we format it in UTC too
+    const date = new Date(dateField.value).toLocaleDateString('es-ES', {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      timeZone: 'UTC'
+    });
+    const name = form.querySelector('#name').value.trim();
+    const time = form.querySelector('#time').value;
+    const guests = form.querySelector('#guests').value;
+    const people = guests === '1' ? '1 persona' : `${guests} personas`;
+
+    confirmation.querySelector('.booking-confirmation__text').textContent =
+      `Gracias, ${name}. Te esperamos el ${date} a las ${time} (${people}).`;
+
+    form.hidden = true;
+    confirmation.hidden = false;
+    confirmation.focus();
+  }
+
   form.addEventListener('submit', (event) => {
+    event.preventDefault();
     submitted = true;
     const invalidFields = [...fields].filter((field) => !validateField(field));
 
     if (invalidFields.length > 0) {
-      event.preventDefault();
       showSummary(invalidFields);
       summary.focus();
+      return;
     }
+
+    summary.hidden = true;
+    showConfirmation();
+  });
+
+  confirmation.querySelector('#booking-again').addEventListener('click', () => {
+    form.reset();
+    submitted = false;
+    fields.forEach((field) => field.removeAttribute('aria-invalid'));
+    form.querySelectorAll('.field__error').forEach((error) => {
+      error.hidden = true;
+    });
+    confirmation.hidden = true;
+    form.hidden = false;
+    form.querySelector('#name').focus();
   });
 
   // After the first try, errors update while the user corrects them

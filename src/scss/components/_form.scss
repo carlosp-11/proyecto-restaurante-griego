@@ -119,3 +119,24 @@
     color: $error;
   }
 }
+
+// Confirmation after a valid booking
+.booking-confirmation {
+  max-width: 40rem;
+  padding: $space-md;
+  border-left: 4px solid $olive;
+  background-color: $lime-white;
+
+  h2 {
+    margin-bottom: $space-sm;
+  }
+
+  &:focus {
+    outline: 3px solid $blue;
+    outline-offset: 2px;
+  }
+
+  .button {
+    margin-top: $space-sm;
+  }
+}
