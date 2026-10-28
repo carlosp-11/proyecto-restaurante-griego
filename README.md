@@ -2,6 +2,10 @@
 
 Web de un restaurante ficticio de cocina griega de autor. Proyecto de la PEC 1 de **M4.257 Herramientas HTML y CSS** (Máster Universitario en Desarrollo de Sitios y Aplicaciones Web, UOC).
 
+**Web publicada:** https://el-olivo-azul.netlify.app
+
+Se publica en Netlify con despliegue continuo: cada push a `main` ejecuta `npm run build` y publica la carpeta `dist`.
+
 ## Requisitos
 
 - Node.js 20 o superior (incluye npm)
@@ -53,10 +57,8 @@ src/
 
 - **Parcel** como empaquetador, con **Sass** y **PostHTML** (`posthtml-include`) para los parciales HTML.
 - **Swiper** para el carrusel de la portada.
-- **Browserslist**: en producción se da soporte a los navegadores publicados desde 2016; en desarrollo, solo a la última versión de Chrome, Firefox y Safari.
+- **Browserslist** para que la versión publicada funcione también en navegadores antiguos.
 
 ## Créditos
 
 Las fuentes del contenido, las licencias de terceros y el uso de inteligencia artificial están detallados en la página `/links`.
-
-Autor: Carlos Ponce
