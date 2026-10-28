@@ -73,6 +73,13 @@
   }
 }
 
+// Booking link stands out a bit from the rest
+.main-nav__list .main-nav__cta {
+  color: $blue;
+  font-weight: 400;
+  border-bottom-color: $blue;
+}
+
 // Dishes submenu. Without JS it is just a nested list that is always visible
 .main-nav__item--has-sub {
   display: flex;

@@ -1,0 +1,79 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.booking {
+  display: grid;
+  gap: $space-lg;
+
+  @include from(desktop) {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.booking-form {
+  max-width: 40rem;
+
+  fieldset {
+    margin: 0 0 $space-md;
+    padding: 0;
+    border: 0;
+  }
+
+  legend {
+    margin-bottom: $space-sm;
+    font-family: $font-heading;
+    font-size: 1.4rem;
+    color: $blue-dark;
+  }
+}
+
+.booking-form__help {
+  margin-bottom: $space-md;
+  font-style: italic;
+}
+
+.field {
+  margin-bottom: $space-sm;
+
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: $space-xs;
+    border: 1px solid $earth;
+    border-radius: 4px;
+    background-color: $white;
+    color: $text-color;
+    font: inherit;
+  }
+}
+
+.field__optional {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.booking-form__note {
+  margin-top: $space-sm;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.booking__info {
+  padding: $space-md;
+  border-radius: 4px;
+  background-color: $lime-white;
+
+  h2 {
+    margin-bottom: $space-sm;
+    font-size: 1.4rem;
+  }
+}

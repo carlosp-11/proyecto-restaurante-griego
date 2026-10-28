@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <include src="partials/head.html" locals='{"title": "Reservas · El Olivo Azul", "description": "Reserva mesa en El Olivo Azul, restaurante de cocina griega de autor."}'></include>
+</head>
+<body>
+  <include src="partials/header.html"></include>
+
+  <main id="main" class="container detail">
+    <header class="detail__header">
+      <h1>Reservas</h1>
+      <p class="detail__lead">Cuéntanos qué día quieres venir y cuántos seréis. Te guardamos la mesa.</p>
+    </header>
+
+    <div class="booking">
+      <form class="booking-form" id="booking-form" action="/reservas/" method="get">
+        <p class="booking-form__help">Todos los campos son obligatorios salvo los marcados como opcionales.</p>
+
+        <fieldset>
+          <legend>Tus datos</legend>
+
+          <div class="field">
+            <label for="name">Nombre y apellidos</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Teléfono</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu reserva</legend>
+
+          <div class="field">
+            <label for="date">Día</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+
+          <div class="field">
+            <label for="time">Hora</label>
+            <select id="time" name="time" required>
+              <option value="">Elige una hora</option>
+              <optgroup label="Comidas">
+                <option>13:00</option>
+                <option>13:30</option>
+                <option>14:00</option>
+                <option>14:30</option>
+                <option>15:00</option>
+              </optgroup>
+              <optgroup label="Cenas">
+                <option>20:00</option>
+                <option>20:30</option>
+                <option>21:00</option>
+                <option>21:30</option>
+                <option>22:00</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="guests">Número de personas</label>
+            <select id="guests" name="guests" required>
+              <option value="">Elige cuántos seréis</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 personas</option>
+              <option value="6">6 personas</option>
+              <option value="7">7 personas</option>
+              <option value="8">8 personas</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="comments">Comentarios <span class="field__optional">(opcional)</span></label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <button class="button button--primary" type="submit">Solicitar reserva</button>
+        <p class="booking-form__note">Formulario de demostración: no se envía ningún dato.</p>
+      </form>
+
+      <aside class="booking__info" aria-labelledby="booking-info-title">
+        <h2 id="booking-info-title">Antes de reservar</h2>
+        <p>Abrimos de martes a domingo. Puedes consultar el horario completo en <a href="/restaurante/">El restaurante</a>.</p>
+        <p>Para grupos de más de ocho personas, escríbenos en el campo de comentarios y te propondremos una mesa compartida.</p>
+      </aside>
+    </div>
+  </main>
+
+  <include src="partials/footer.html"></include>
+</body>
+</html>
