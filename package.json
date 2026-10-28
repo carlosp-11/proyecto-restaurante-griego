@@ -8,7 +8,8 @@
     "src/det1/index.html",
     "src/det2/index.html",
     "src/restaurante/index.html",
-    "src/reservas/index.html"
+    "src/reservas/index.html",
+    "src/links/index.html"
   ],
   "scripts": {
     "parcel:dev": "parcel",

@@ -63,3 +63,16 @@
   font-size: 0.95rem;
   font-style: italic;
 }
+
+.links ul {
+  max-width: 50rem;
+  padding-left: $space-md;
+
+  li + li {
+    margin-top: $space-xs;
+  }
+
+  ul {
+    margin-top: $space-xs;
+  }
+}
